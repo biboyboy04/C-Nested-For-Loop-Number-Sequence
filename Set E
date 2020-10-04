@@ -1,0 +1,31 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int n = 0; int z =1; int x = 9;
+		for(int a = 5; a>0; a--){
+			n=a;
+			for(int b = 1; b<=5; b++){
+				Console.Write(n+"\t");
+				if(a%2 == 0){
+					if(n%2 == 0){
+						n+=z;
+					}else{
+						n+=x;
+					}
+				}
+				else{
+					if(n%2 == 0){
+						n+=x;
+					}else{
+						n+=z;
+					}
+				}
+			}
+			Console.WriteLine();
+			z+=2; x-=2;
+		}
+	}
+}
