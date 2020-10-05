@@ -1,0 +1,38 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("-------------B---------------");
+		int n = 1;
+		for(int a = 1; a<=5; a++){
+			for(int b = 1; b<=5; b++){
+				Console.Write(n+"\t");
+				if(a%2==0){n--;}
+				else{n++;}
+			}
+			Console.WriteLine();
+			if(a%2==0){n+=6;}
+			else{n+=4;}
+		}
+		Console.WriteLine("-------------E---------------");
+		int m = 0; int z =1; int x = 9;
+		for(int a = 5; a>0; a--){
+			m=a;
+			for(int b = 1; b<=5; b++){
+				Console.Write(m+"\t");
+				if(a%2 == 0){
+					if(m%2 == 0){m+=z;}
+					else{m+=x;}
+				}
+				else{
+					if(m%2 == 0){m+=x;}
+					else{m+=z;}
+				}
+			}
+			Console.WriteLine();
+			z+=2; x-=2;
+		}
+	}
+}
